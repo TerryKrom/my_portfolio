@@ -675,7 +675,7 @@ a:hover {
 
 /*CALL TO ACTION*/
 .call-to-action {
-    background: url('https://i.postimg.cc/TYCjCTLL/background.jpg');
+    background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-position: center top;
     background-size: cover;
     background-attachment: fixed;
@@ -729,11 +729,15 @@ footer {
 }
 
 footer {
-    color: #373e47;
+    color: var(--main-color) !important;
+}
+
+footer a{
+    color: var(--main-color);
 }
 
 footer.top {
-    border-bottom: 2px solid #3a4f6a;
+    border-bottom: 2px solid var(--main-color);
     padding-bottom: 20px;
 }
 
