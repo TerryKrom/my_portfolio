@@ -731,6 +731,7 @@ footer {
 footer {
     color: var(--main-color) !important;
     background-color: var(--background-color);
+    margin: auto;
 }
 
 footer a{
@@ -744,13 +745,7 @@ footer.bottom {
     max-width: none !important;
 }
 
-footer.top .links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.links>div {
+.links > div {
     display: grid;
     gap: 10px;
     margin-bottom: 30px;
