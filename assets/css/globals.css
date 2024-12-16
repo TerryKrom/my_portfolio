@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Teachers&display=swap');
-
 :root {
-    --main-color: #43075f;
+    --main-color: #4c086b;
     --black100: #f7f7f7;
     --black400: #555555;
     --black900: #000000;
@@ -9,6 +8,38 @@
     --shadow-black100: 0 5px 15px rgba(0, 0, 0, .1);
     --shadow-black300: 0 5px 15px rgba(0, 0, 0, .3);
     --black-alpha100: 0 5px 15px rgba(0, 0, 0, .05);
+    
+    --background-color: #fbfbfb;
+    --header-background: #fbfbfb;
+    --navbar-background: #fbfbfb;
+    --text-color: #050505;
+    --text-color-second: #050505;
+    --about-area-bg: #fbfbfb;
+}
+
+body[data-theme="dark"] {
+    --background-color: #202020;
+    --header-background: #202020; /* Cor para o tema escuro */
+    --navbar-background: #202020;
+    --text-color: #eee;
+    --main-color: #6d0d99;
+    --about-area-bg: #101010;
+    --text-color-second: #e4e4e4;
+    --shadow-black100: 0 5px 15px rgba(97, 19, 133, 0.1);
+    --shadow-black300: 0 5px 15px rgba(97, 19, 133, 0.3);
+}
+
+/* Aplicação dos temas */
+body {
+    background-color: var(--background-color);
+}
+
+.header-content {
+    background-color: var(--header-background);
+}
+
+.navbar {
+    background-color: var(--navbar-background);
 }
 
 body {
@@ -16,10 +47,6 @@ body {
     font-size: 1rem;
     overflow-x: hidden;
     background-color: var(--white);
-}
-
-body[data-theme="dark"] {
-    background-color: #050505;
 }
 
 * {
@@ -88,7 +115,7 @@ a:hover {
 
 .section-title h2 {
     font-size: 30px;
-    color: var(--black900);
+    color: var(--text-color);
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
@@ -99,28 +126,12 @@ a:hover {
     color: var(--main-color);
 }
 
-.owl-carousel .owl-dots {
-    padding: 0 15px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.owl-carousel button.owl-dot {
-    height: 6px;
-    width: 24px;
-    background-color: #dddddd;
-    display: inline-block;
-    margin: 0 4px;
-    border-radius: 5px;
-}
-
-.owl-carousel button.owl-dot.active {
-    background-color: var(--main-color);
-}
-
 /*NAVBAR*/
+.dark-mode-toggle{
+    color: var(--main-color);
+}
+
 .navbar {
-    background-color: var(--white);
     padding: 8px 0;
     box-shadow: 0 10px 10px rgba(0, 0, 0, .08);
     transition: all .5s ease;
@@ -143,7 +154,6 @@ a:hover {
 .navbar .nav-item {
     margin-left: 35px;
 }
-
 .navbar .nav-item .nav-link {
     color: var(--black400);
     text-transform: capitalize;
@@ -175,12 +185,16 @@ a:hover {
     height: 45px;
 }
 
-.navbar .nav-item .nav-link:nth-last-child(1):hover::before {
-    height: 0px !important;
+/* Remove o hover do último link */
+.navbar .nav-item:last-child .nav-link:hover::before {
+    height: 0px;
+}
+
+.navbar .nav-item:last-child .nav-link:hover {
+    color: var(--black400); /* Remove a cor no hover também, se necessário */
 }
 
 .header-content {
-    background-color: #fbfbfb;
     height: 800px;
     padding-top: 110px;
     position: relative;
@@ -269,20 +283,20 @@ a:hover {
     font-size: 30px;
     font-weight: 600;
     padding-bottom: 8px;
-    color: var(--main-color);
+    color: var(--text-color);
 }
 
 .home-text h1 {
     font-size: 60px;
     font-weight: 600;
     padding-bottom: 8px;
-    color: var(--black900);
+    color: var(--main-color);
 }
 
 .home-text p {
     font-size: 18px;
     line-height: 28px;
-    color: var(--black900);
+    color: var(--text-color);
     font-weight: 300;
     padding-bottom: 30px;
 }
@@ -352,13 +366,13 @@ a:hover {
 
 .header-social .header-social-icon ul li a {
     color: var(--main-color);
-    font-size: 20px;
+    font-size: 22px;
     width: 40px;
     height: 40px;
     display: inline-block;
     line-height: 40px;
     border-radius: 50%;
-    border: 1px solid var(--main-color);
+    border: 2px solid var(--main-color);
     text-align: center;
     transition: all .3s ease-out 0s;
 }
@@ -370,12 +384,16 @@ a:hover {
 }
 
 /*ABOUT*/
+.about-area{
+    background-color: var(--background-color);
+}
 
-.about-content .about-title {
+.about-content .about-title{
     font-size: 22px;
     font-weight: 600;
     text-transform: capitalize;
     padding-bottom: 15px;
+    color: var(--text-color);
 }
 
 .about-content .about-title span {
@@ -386,7 +404,7 @@ a:hover {
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    color: var(--black400);
+    color: var(--text-color-second);
     margin: 0;
 }
 
@@ -416,34 +434,15 @@ a:hover {
 }
 
 .about-content .single-info .info-text p span {
-    color: var(--black900);
+    color: var(--text-color);
     font-weight: 500;
-}
-
-.hire-me {
-    background-color: var(--main-color);
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 30px;
-    color: var(--white);
-    font-size: 16px;
-    text-transform: capitalize;
-    display: inline-block;
-    box-shadow: var(--shadow-black300);
-    font-weight: 500;
-    transition: all .5s ease;
-}
-
-.hire-me:hover {
-    background-color: var(--white);
-    color: var(--main-color);
 }
 
 .text-left h4 {
     font-size: 16px;
     padding-top: 15px;
     font-weight: 600;
+    color: var(--text-color-second);
 }
 
 .skillbar-container {
@@ -463,7 +462,7 @@ a:hover {
 /*SERVICES*/
 
 .services {
-    background-color: var(--black100);
+    background-color: var(--background-color);
 }
 
 .service-item {
@@ -476,6 +475,8 @@ a:hover {
     z-index: 1;
     overflow: hidden;
     transition: all .5s ease;
+    height: 330px;
+    cursor: pointer;
 }
 
 .service-item:hover {
@@ -524,12 +525,12 @@ a:hover {
 .service-item h3 {
     font-size: 22px;
     margin: 0 0 20px;
-    color: var(--black900);
+    color: var(--text-color);
     font-weight: 500;
     text-transform: capitalize;
 }
 
-.service-item:hover h3 {
+.service-item:hover h3, .service-item:hover p{
     color: var(--white);
 }
 
@@ -537,18 +538,18 @@ a:hover {
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
-    color: var(--black400);
+    color: var(--text-color-second);
     margin: 0 0 15px;
 }
 
-.service-item:hover p {
-    color: var(--black900);
-}
-
 /*PORTFOLIO*/
+#portfolio{
+    background-color: var(--background-color);
+}
 .sortBtn {
     margin: 0 auto;
 }
+
 
 .filter-btn {
     text-transform: uppercase;
@@ -720,30 +721,27 @@ footer {
     margin: 0 30px;
 }
 
-@media (width >=620px) {
+@media (width >= 620px) {
     footer {
         margin: 0 auto;
-        max-width: 1200px;
         padding: 0;
     }
 }
 
 footer {
     color: var(--main-color) !important;
+    background-color: var(--background-color);
 }
 
 footer a{
     color: var(--main-color);
 }
 
-footer.top {
-    border-bottom: 2px solid var(--main-color);
-    padding-bottom: 20px;
-}
-
 footer.bottom {
-    padding: 20px 0;
+    padding: 20px;
     justify-content: space-between;
+    width: 100%;
+    max-width: none !important;
 }
 
 footer.top .links {
@@ -767,6 +765,7 @@ footer h2 {
 
 .legal {
     font-size: 12px;
+    font-weight: normal;
 }
 
 .legal>a {
@@ -786,6 +785,7 @@ footer.bottom .links>a {
     font-size: 24px;
 }
 
+/*MEDIA QUERIES*/
 @media (width < 420px) {
     footer {
         text-align: center;
@@ -806,8 +806,6 @@ footer.bottom .links>a {
         margin-bottom: 2px;
     }
 }
-
-/*MEDIA QUERIES*/
 
 @media(max-width: 991px) {
     .header-content {
