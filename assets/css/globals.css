@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teachers&display=swap');
 :root {
     --main-color: #4c086b;
+    --main-color-transparent: #4c086b9a;
     --black100: #f7f7f7;
     --black400: #555555;
     --black900: #000000;
@@ -8,7 +9,6 @@
     --shadow-black100: 0 5px 15px rgba(0, 0, 0, .1);
     --shadow-black300: 0 5px 15px rgba(0, 0, 0, .3);
     --black-alpha100: 0 5px 15px rgba(0, 0, 0, .05);
-    
     --background-color: #fbfbfb;
     --header-background: #fbfbfb;
     --navbar-background: #fbfbfb;
@@ -135,6 +135,10 @@ a:hover {
     padding: 8px 0;
     box-shadow: 0 10px 10px rgba(0, 0, 0, .08);
     transition: all .5s ease;
+}
+
+.navbar-nav{
+    background-color: transparent !important;
 }
 
 .navbar.navbar-shrink {
@@ -579,6 +583,7 @@ a:hover {
 
 .single-work .work-image img {
     width: 100%;
+    height: 240px;
 }
 
 .single-work .work-overlay {
@@ -587,10 +592,11 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(172, 49, 165, .8);
+    background-color: var(--main-color-transparent);
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease-out;
+    border-radius: 10px;
 }
 
 .single-work:hover .work-overlay {
