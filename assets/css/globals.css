@@ -38,6 +38,15 @@ body {
     background-color: var(--header-background);
 }
 
+.flag{
+    transition: 0.2s linear;
+    margin-top: 5px;
+}
+
+.flag:hover{
+    opacity: 0.7;
+}
+
 .navbar {
     background-color: var(--navbar-background);
 }
@@ -129,6 +138,7 @@ a:hover {
 /*NAVBAR*/
 .dark-mode-toggle{
     color: var(--main-color);
+    font-size: 24px;
 }
 
 .navbar {
@@ -784,6 +794,11 @@ footer.bottom .links {
 
 footer.bottom .links>a {
     font-size: 24px;
+}
+
+footer.bottom .links>a:hover{
+    color: var(--main-color-transparent);
+    cursor: pointer;
 }
 
 /*MEDIA QUERIES*/
