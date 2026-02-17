@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/globals.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x22.png" type="image/x-icon">
 
 </head>
 
@@ -18,7 +18,8 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a href="#index.html" class="navbar-brand">
-                    < TerryKrom />
+                    <img src="./assets/images/logo.png" alt="logo TK">
+                    <span>TerryKrom</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><i
@@ -52,97 +53,71 @@
         </nav>
         <section class="home" id="home" data-scroll-index="0">
             <div class="header-content d-flex align-items-center">
+
+                <!-- Gradient Global -->
+                <svg width="0" height="0" style="position:absolute">
+                    <defs>
+                        <linearGradient id="main-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#d136ff" />
+                            <stop offset="50%" stop-color="#882af0" />
+                            <stop offset="100%" stop-color="#48c6fb" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <!-- Parallax -->
                 <div id="parallax">
+
                     <div class="header-shape shape-one" data-depth="0.10">
-                        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                    <stop id="stop1" stop-color="rgba(150.984, 0, 255, 1)" offset="0%"></stop>
-                                    <stop id="stop2" stop-color="rgba(67, 7, 95, 1)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#sw-gradient)"
+                        <svg viewBox="0 0 100 100">
+                            <path fill="url(#main-gradient)" stroke="url(#main-gradient)"
                                 d="M33.6,-19.4C39.3,-9.6,36.5,4.9,29.5,16.8C22.5,28.6,11.3,37.7,0.1,37.6C-11,37.5,-22.1,28.3,-28.8,16.7C-35.6,5,-38,-9.2,-32.5,-18.9C-26.9,-28.6,-13.5,-33.9,0.3,-34C14,-34.2,28,-29.2,33.6,-19.4Z"
-                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                                style="transition: 0.3s;" stroke="url(#sw-gradient)"></path>
+                                transform="translate(50 50)" stroke-width="0" />
                         </svg>
                     </div>
 
                     <div class="header-shape shape-two" data-depth="0.30">
-                        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                    <stop id="stop1" stop-color="rgba(150.984, 0, 255, 1)" offset="0%"></stop>
-                                    <stop id="stop2" stop-color="rgba(67, 7, 95, 1)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#sw-gradient)"
+                        <svg viewBox="0 0 100 100">
+                            <path fill="url(#main-gradient)" stroke="url(#main-gradient)"
                                 d="M28.1,3.2C28.1,16.3,14.1,32.6,-0.5,32.6C-15.1,32.6,-30.2,16.3,-30.2,3.2C-30.2,-9.8,-15.1,-19.6,-0.5,-19.6C14.1,-19.6,28.1,-9.8,28.1,3.2Z"
-                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                                style="transition: 0.3s;" stroke="url(#sw-gradient)"></path>
+                                transform="translate(50 50)" stroke-width="0" />
                         </svg>
                     </div>
 
                     <div class="header-shape shape-three" data-depth="0.40">
-                        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                    <stop id="stop1" stop-color="rgba(150.984, 0, 255, 1)" offset="0%"></stop>
-                                    <stop id="stop2" stop-color="rgba(67, 7, 95, 1)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#sw-gradient)"
+                        <svg viewBox="0 0 100 100">
+                            <path fill="url(#main-gradient)" stroke="url(#main-gradient)"
                                 d="M17.9,-4.6C21.6,5.9,22.2,18.6,15.4,24.2C8.7,29.8,-5.3,28.2,-16.8,20.5C-28.2,12.8,-37,-1,-33.8,-10.8C-30.6,-20.5,-15.3,-26.1,-4.1,-24.8C7,-23.4,14.1,-15.1,17.9,-4.6Z"
-                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                                style="transition: 0.3s;" stroke="url(#sw-gradient)"></path>
+                                transform="translate(50 50)" stroke-width="0" />
                         </svg>
                     </div>
 
                     <div class="header-shape shape-four" data-depth="0.60">
-                        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                    <stop id="stop1" stop-color="rgba(150.984, 0, 255, 1)" offset="0%"></stop>
-                                    <stop id="stop2" stop-color="rgba(67, 7, 95, 1)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#sw-gradient)"
+                        <svg viewBox="0 0 100 100">
+                            <path fill="url(#main-gradient)" stroke="url(#main-gradient)"
                                 d="M33.6,-19.4C39.3,-9.6,36.5,4.9,29.5,16.8C22.5,28.6,11.3,37.7,0.1,37.6C-11,37.5,-22.1,28.3,-28.8,16.7C-35.6,5,-38,-9.2,-32.5,-18.9C-26.9,-28.6,-13.5,-33.9,0.3,-34C14,-34.2,28,-29.2,33.6,-19.4Z"
-                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                                style="transition: 0.3s;" stroke="url(#sw-gradient)"></path>
+                                transform="translate(50 50)" stroke-width="0" />
                         </svg>
                     </div>
 
                     <div class="header-shape shape-five" data-depth="0.20">
-                        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                    <stop id="stop1" stop-color="rgba(150.984, 0, 255, 1)" offset="0%"></stop>
-                                    <stop id="stop2" stop-color="rgba(67, 7, 95, 1)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#sw-gradient)"
+                        <svg viewBox="0 0 100 100">
+                            <path fill="url(#main-gradient)" stroke="url(#main-gradient)"
                                 d="M33.6,-19.4C39.3,-9.6,36.5,4.9,29.5,16.8C22.5,28.6,11.3,37.7,0.1,37.6C-11,37.5,-22.1,28.3,-28.8,16.7C-35.6,5,-38,-9.2,-32.5,-18.9C-26.9,-28.6,-13.5,-33.9,0.3,-34C14,-34.2,28,-29.2,33.6,-19.4Z"
-                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                                style="transition: 0.3s;" stroke="url(#sw-gradient)"></path>
+                                transform="translate(50 50)" stroke-width="0" />
                         </svg>
                     </div>
 
                     <div class="header-shape shape-six" data-depth="0.60">
-                        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                    <stop id="stop1" stop-color="rgba(150.984, 0, 255, 1)" offset="0%"></stop>
-                                    <stop id="stop2" stop-color="rgba(67, 7, 95, 1)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#sw-gradient)"
+                        <svg viewBox="0 0 100 100">
+                            <path fill="url(#main-gradient)" stroke="url(#main-gradient)"
                                 d="M33.6,-19.4C39.3,-9.6,36.5,4.9,29.5,16.8C22.5,28.6,11.3,37.7,0.1,37.6C-11,37.5,-22.1,28.3,-28.8,16.7C-35.6,5,-38,-9.2,-32.5,-18.9C-26.9,-28.6,-13.5,-33.9,0.3,-34C14,-34.2,28,-29.2,33.6,-19.4Z"
-                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                                style="transition: 0.3s;" stroke="url(#sw-gradient)"></path>
+                                transform="translate(50 50)" stroke-width="0" />
                         </svg>
                     </div>
+
                 </div>
+
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
@@ -184,6 +159,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </header>
@@ -252,31 +228,43 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title">
-                        <h2>Services <span>designed to help you</span></h2>
+                        <h2>Salesforce & <span>Custom Development Services</span></h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
+
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
-                            <i class="fa-solid fa-laptop"></i>
+                            <i class="fa-solid fa-cloud"></i>
                         </div>
-                        <h3>Website Development</h3>
-                        <p>Crafting modern and responsive websites tailored to your needs, from personal portfolios to
-                            corporate solutions, ensuring functionality, speed, and user experience.</p>
+                        <h3>Salesforce Development</h3>
+                        <p>Custom Apex classes, triggers, Lightning Web Components (LWC), Flows, and automation designed
+                            to optimize business processes and improve platform performance.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
-                            <i class="fa-solid fa-edit"></i>
+                            <i class="fa-solid fa-diagram-project"></i>
                         </div>
-                        <h3>Landing Pages & Blogs</h3>
-                        <p>Designing and developing custom landing pages, blogs, and other web solutions that focus on
-                            engaging content, fast loading times, and conversion optimization.</p>
+                        <h3>System Architecture & Integrations</h3>
+                        <p>REST/SOAP API integrations, external systems synchronization, data modeling, and scalable
+                            architecture planning to ensure reliability and performance.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3>CRM Optimization & Automation</h3>
+                        <p>Business process automation using Flows, validation rules, custom objects, and dashboards to
+                            increase productivity and reduce manual work.</p>
                     </div>
                 </div>
 
@@ -285,42 +273,31 @@
                         <div class="icon">
                             <i class="fa-solid fa-code"></i>
                         </div>
-                        <h3>Software Solutions</h3>
-                        <p>Providing tailored software solutions for businesses and individual clients, streamlining
-                            workflows, enhancing productivity, and meeting specific operational needs.</p>
+                        <h3>Full Stack Development</h3>
+                        <p>Modern web applications built with React, Next.js, and backend technologies, fully integrated
+                            with Salesforce when needed.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
-                            <i class="fa-solid fa-paint-brush"></i>
+                            <i class="fa-solid fa-database"></i>
                         </div>
-                        <h3>Layouts, Prototypes & Logos</h3>
-                        <p>Creating unique layouts, prototypes, and logos to bring your ideas to life, ensuring brand
-                            consistency and visual impact across all platforms.</p>
+                        <h3>Data Migration & Management</h3>
+                        <p>Secure data imports, cleaning, transformation, and large-scale migration strategies to ensure
+                            consistency and compliance.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
-                            <i class="fa-solid fa-bullhorn"></i>
+                            <i class="fa-solid fa-rocket"></i>
                         </div>
-                        <h3>Digital Content & Posts</h3>
-                        <p>Developing high-quality digital content and posts for your social media and marketing
-                            strategies, designed to increase engagement and expand your reach.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <i class="fa-solid fa-mobile"></i>
-                        </div>
-                        <h3>Android App Development</h3>
-                        <p>Designing and developing user-friendly and visually appealing Android applications, tailored
-                            to meet your requirements and provide an exceptional user experience.</p>
+                        <h3>Performance & Scalability</h3>
+                        <p>Governor limits optimization, bulkification strategies, and code refactoring to guarantee
+                            high performance in enterprise environments.</p>
                     </div>
                 </div>
 
@@ -502,6 +479,7 @@
             <span>Guilherme Avila © 2024 All rights reserved </span>
         </div>
         <div class="links">
+            <a href="https://www.salesforce.com/trailblazer/guilaviladev" class="fa-brands fa-salesforce"></a>
             <a href="https://github.com/terrykrom" class="fa-brands fa-github"></a>
             <a href="https://instagram.com/terrykrom" class="fa-brands fa-instagram"></a>
             <a href="https://linkedin.com/in/guilherme-lopes-avila" class="fa-brands fa-linkedin"></a>

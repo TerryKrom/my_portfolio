@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Teachers&display=swap');
 :root {
-    --main-color: #4c086b;
-    --main-color-transparent: #4c086b9a;
+    --main-color: #882af0;
+    --main-color-transparent: #882af09a;
     --black100: #f7f7f7;
-    --black400: #555555;
-    --black900: #000000;
+    --black400: #3d3d3d;
+    --black900: #151515;
     --white: #ffffff;
     --shadow-black100: 0 5px 15px rgba(0, 0, 0, .1);
     --shadow-black300: 0 5px 15px rgba(0, 0, 0, .3);
@@ -22,11 +22,13 @@ body[data-theme="dark"] {
     --header-background: #101010; /* Cor para o tema escuro */
     --navbar-background: #101010;
     --text-color: #eee;
-    --main-color: #b23de9;
+    --main-color: #882af0;
     --about-area-bg: #131313;
     --text-color-second: #e4e4e4;
     --shadow-black100: 0 5px 15px rgba(97, 19, 133, 0.1);
     --shadow-black300: 0 5px 15px rgba(97, 19, 133, 0.3);
+    --black400: #c2c2c2;
+    --black900: #050505;
 }
 
 /* Aplicação dos temas */
@@ -163,6 +165,17 @@ a:hover {
 .navbar .navbar-brand {
     font-size: 2rem;
     color: var(--main-color);
+}
+
+.navbar-brand img{
+    height: 50px;
+}
+
+.navbar-brand span {
+    background: linear-gradient(90deg, #d136ff 0%, #882af0 50%, #48c6fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .navbar .nav-item {
