@@ -79,6 +79,76 @@
 }(jQuery));
 
 $(document).ready(function () {
+    const isPT = window.location.pathname.includes("index-pt");
+
+    /* =========================
+      PORTFOLIO DATA
+========================= */
+
+    const salesforceProjects = [
+        {
+            title: "Custom Timeline LWC",
+            desc: {
+                en: "Reusable Lightning Web Component for dynamic timeline views inside Salesforce.",
+                pt: "Componente Lightning reutilizável para visualização dinâmica de timelines dentro do Salesforce."
+            },
+            stack: ["LWC", "Apex", "SLDS"],
+            repo: "https://github.com/TerryKrom/custom-timeline"
+        },
+        {
+            title: "LWC Rich Text Editor",
+            desc: {
+                en: "Advanced rich text editor for Salesforce beyond platform limitations.",
+                pt: "Editor avançado de texto rico para Salesforce além das limitações padrão da plataforma."
+            },
+            stack: ["LWC", "JavaScript", "Salesforce UI"],
+            repo: "https://github.com/TerryKrom/lwc-rich-text-editor"
+        },
+        {
+            title: "Stripe Payment Integration",
+            desc: {
+                en: "Stripe payment link generation integrated into Salesforce CRM.",
+                pt: "Geração de links de pagamento Stripe integrada ao CRM Salesforce."
+            },
+            stack: ["Apex", "REST API", "Stripe"],
+            repo: "https://github.com/TerryKrom/stripe-payment-link"
+        }
+    ];
+
+    const frontendProjects = [
+        {
+            category: "react",
+            title: "Forum CPS",
+            img: "./assets/images/forum.png",
+            repo: "https://github.com/cpsforum/cpsforum"
+        },
+        {
+            category: "react-native",
+            title: "Forum CPS Mobile",
+            img: "./assets/images/forum-mobile.png",
+            repo: "https://github.com/terrykrom/cps-forum-mobile"
+        },
+        {
+            category: "react",
+            title: "Artist Page",
+            img: "./assets/images/dkj.png",
+            repo: "https://github.com/terrykrom/cps-forum-mobile"
+        },
+        {
+            category: "react",
+            title: "Way to game",
+            img: "./assets/images/waytogame.png",
+            repo: "#"
+        },
+        {
+            category: "html",
+            title: "Love Site",
+            img: "./assets/images/lovesite.png",
+            repo: "https://github.com/Redyen-Softwares/isTheLoveSite"
+        }
+    ];
+
+
     $(window).on("scroll", function () {
         if ($(this).scrollTop() > 90) {
             $(".navbar").addClass("navbar-shrink");
@@ -86,6 +156,76 @@ $(document).ready(function () {
             $(".navbar").removeClass("navbar-shrink");
         }
     });
+
+    function renderSalesforce() {
+        let container = $("#sf-projects");
+        container.empty();
+
+        salesforceProjects.forEach(p => {
+            container.append(`
+            <div class="col-lg-4 col-md-6">
+                <div class="sf-project-card p-4 mt-3">
+                    <h4>${p.title}</h4>
+                    <p>${isPT ? p.desc.pt : p.desc.en}</p>
+                    <div class="tech-stack">
+                        ${p.stack.map(s => `<span>${s}</span>`).join("")}
+                    </div>
+                    <a href="${p.repo}" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> ${isPT ? "Ver Repositório" : "View Repository"}
+                    </a>
+                </div>
+            </div>
+        `);
+        });
+    }
+
+    function renderFrontend() {
+        let container = $("#frontend-grid");
+        container.empty();
+
+        frontendProjects.forEach(p => {
+            container.append(`
+            <div class="col-lg-4 col-md-6 col-sm-6 ${p.category}">
+                <div class="single-work text-center mt-30">
+                    <div class="work-image">
+                        <img src="${p.img}" alt="${p.title}">
+                    </div>
+                    <div class="work-overlay">
+                        <div class="work-content">
+                            <h3 class="work-title">${p.title}</h3>
+                            <ul>
+                                <li>
+                                    <a href="${p.img}" class="image-popup">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="${p.repo}" target="_blank">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+        });
+
+        // 🔥 IMPORTANTE: reinitialize isotope depois de renderizar
+        $('.grid').isotope({
+            itemSelector: '.col-lg-4'
+        });
+
+        // 🔥 reinitialize magnific popup
+        $('.image-popup').magnificPopup({
+            type: 'image',
+            gallery: { enabled: true }
+        });
+    }
+
+    renderSalesforce();
+    renderFrontend();
 
     function parallaxMouse() {
         if ($("#parallax").length) {

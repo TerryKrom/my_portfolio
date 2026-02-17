@@ -137,6 +137,10 @@ a:hover {
     color: var(--main-color);
 }
 
+.section-title p {
+    color: var(--text-color);
+}
+
 /*NAVBAR*/
 .dark-mode-toggle{
     color: var(--main-color);
@@ -702,6 +706,48 @@ a:hover {
     background-color: var(--white);
     color: var(--main-color);
 }
+
+.sf-project-card {
+    background: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color-transparent);
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.sf-project-card:hover {
+    transform: translateY(-5px);
+    border-color: #882af0;
+}
+
+.sf-project-card h4 {
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+.tech-stack {
+    margin: 15px 0;
+}
+
+.tech-stack span {
+    display: inline-block;
+    background: rgba(136, 42, 240, 0.15);
+    color: #caa6ff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 3px;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
 
 /*CALL TO ACTION*/
 .call-to-action {
