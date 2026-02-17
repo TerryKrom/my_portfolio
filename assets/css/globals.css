@@ -18,12 +18,12 @@
 }
 
 body[data-theme="dark"] {
-    --background-color: #202020;
-    --header-background: #202020; /* Cor para o tema escuro */
-    --navbar-background: #202020;
+    --background-color: #101010;
+    --header-background: #101010; /* Cor para o tema escuro */
+    --navbar-background: #101010;
     --text-color: #eee;
-    --main-color: #6d0d99;
-    --about-area-bg: #101010;
+    --main-color: #b23de9;
+    --about-area-bg: #131313;
     --text-color-second: #e4e4e4;
     --shadow-black100: 0 5px 15px rgba(97, 19, 133, 0.1);
     --shadow-black300: 0 5px 15px rgba(97, 19, 133, 0.3);
@@ -399,7 +399,7 @@ a:hover {
 
 /*ABOUT*/
 .about-area{
-    background-color: var(--background-color);
+    background-color: var(--about-area-bg);
 }
 
 .about-content .about-title{
